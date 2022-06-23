@@ -1,3 +1,4 @@
+#Use standard php-apache and added needed extensions
 FROM php:8.0-apache
 RUN apt update && apt install -y zlib1g-dev libpng-dev libc-client-dev libkrb5-dev libicu-dev && rm -rf /var/lib/apt/lists/*
 RUN docker-php-ext-configure imap --with-kerberos --with-imap-ssl
